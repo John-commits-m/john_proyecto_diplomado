@@ -23,6 +23,7 @@ body::before {
   z-index: -1;
 }
 
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -187,6 +188,166 @@ h6 {
   #header.header-top h1 {
     font-size: 26px;
   }
+}
+
+/* Loader */
+.loader {
+  position: absolute;
+  top: 200px;
+  right: 300px;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: perspective(500px) rotateX(60deg);
+}
+
+@media (max-width: 992px) {
+  .loader {
+    position: relative;
+    top: inherit;
+    right: inherit;
+  }
+}
+
+.loader span {
+  position: absolute;
+  display: block;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transform: translateZ(-100px);
+
+  animation: animate 3s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: translateZ(-100px);
+  }
+
+  50% {
+    transform: translateZ(100px);
+  }
+}
+
+.loader span:nth-child(1) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation-delay: 1.4s;
+}
+
+.loader span:nth-child(2) {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  animation-delay: 1.3s;
+}
+
+.loader span:nth-child(3) {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  animation-delay: 1.2s;
+}
+
+.loader span:nth-child(4) {
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  animation-delay: 1.1s;
+}
+
+.loader span:nth-child(5) {
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  animation-delay: 1s;
+}
+
+.loader span:nth-child(6) {
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  bottom: 50px;
+  animation-delay: 0.9s;
+}
+
+.loader span:nth-child(7) {
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  bottom: 60px;
+  animation-delay: 0.8s;
+}
+
+.loader span:nth-child(8) {
+  top: 70px;
+  left: 70px;
+  right: 70px;
+  bottom: 70px;
+  animation-delay: 0.7s;
+}
+
+.loader span:nth-child(9) {
+  top: 80px;
+  left: 80px;
+  right: 80px;
+  bottom: 80px;
+  animation-delay: 0.6s;
+}
+
+.loader span:nth-child(10) {
+  top: 90px;
+  left: 90px;
+  right: 90px;
+  bottom: 90px;
+  animation-delay: 0.5s;
+}
+
+.loader span:nth-child(11) {
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+  animation-delay: 0.4s;
+}
+
+.loader span:nth-child(12) {
+  top: 110px;
+  left: 110px;
+  right: 110px;
+  bottom: 110px;
+  animation-delay: 0.3s;
+}
+
+.loader span:nth-child(13) {
+  top: 120px;
+  left: 120px;
+  right: 120px;
+  bottom: 120px;
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(14) {
+  top: 130px;
+  left: 130px;
+  right: 130px;
+  bottom: 130px;
+  animation-delay: 0.1s;
+}
+
+.loader span:nth-child(15) {
+  top: 140px;
+  left: 140px;
+  right: 140px;
+  bottom: 140px;
+  animation-delay: 0s;
 }
 
 /*--------------------------------------------------------------
@@ -438,166 +599,6 @@ section .container {
   margin-bottom: 0;
 }
 
-/* Loader */
-.loader {
-  position: absolute;
-  top: 200px;
-  right: 300px;
-  width: 300px;
-  height: 300px;
-  transform-style: preserve-3d;
-  transform: perspective(500px) rotateX(60deg);
-}
-
-@media (max-width: 992px) {
-  .loader {
-    position: relative;
-    top: inherit;
-    right: inherit;
-  }
-}
-
-.loader span {
-  position: absolute;
-  display: block;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  border-radius: 50%;
-  transform: translateZ(-100px);
-
-  animation: animate 3s ease-in-out infinite;
-}
-
-@keyframes animate {
-  0%, 100% {
-    transform: translateZ(-100px);
-  }
-
-  50% {
-    transform: translateZ(100px);
-  }
-}
-
-.loader span:nth-child(1) {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation-delay: 1.4s;
-}
-
-.loader span:nth-child(2) {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  animation-delay: 1.3s;
-}
-
-.loader span:nth-child(3) {
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  animation-delay: 1.2s;
-}
-
-.loader span:nth-child(4) {
-  top: 30px;
-  left: 30px;
-  right: 30px;
-  bottom: 30px;
-  animation-delay: 1.1s;
-}
-
-.loader span:nth-child(5) {
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  animation-delay: 1s;
-}
-
-.loader span:nth-child(6) {
-  top: 50px;
-  left: 50px;
-  right: 50px;
-  bottom: 50px;
-  animation-delay: 0.9s;
-}
-
-.loader span:nth-child(7) {
-  top: 60px;
-  left: 60px;
-  right: 60px;
-  bottom: 60px;
-  animation-delay: 0.8s;
-}
-
-.loader span:nth-child(8) {
-  top: 70px;
-  left: 70px;
-  right: 70px;
-  bottom: 70px;
-  animation-delay: 0.7s;
-}
-
-.loader span:nth-child(9) {
-  top: 80px;
-  left: 80px;
-  right: 80px;
-  bottom: 80px;
-  animation-delay: 0.6s;
-}
-
-.loader span:nth-child(10) {
-  top: 90px;
-  left: 90px;
-  right: 90px;
-  bottom: 90px;
-  animation-delay: 0.5s;
-}
-
-.loader span:nth-child(11) {
-  top: 100px;
-  left: 100px;
-  right: 100px;
-  bottom: 100px;
-  animation-delay: 0.4s;
-}
-
-.loader span:nth-child(12) {
-  top: 110px;
-  left: 110px;
-  right: 110px;
-  bottom: 110px;
-  animation-delay: 0.3s;
-}
-
-.loader span:nth-child(13) {
-  top: 120px;
-  left: 120px;
-  right: 120px;
-  bottom: 120px;
-  animation-delay: 0.2s;
-}
-
-.loader span:nth-child(14) {
-  top: 130px;
-  left: 130px;
-  right: 130px;
-  bottom: 130px;
-  animation-delay: 0.1s;
-}
-
-.loader span:nth-child(15) {
-  top: 140px;
-  left: 140px;
-  right: 140px;
-  bottom: 140px;
-  animation-delay: 0s;
-}
-
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
@@ -626,6 +627,42 @@ section .container {
 
 .interests .icon-box:hover {
   background: rgba(255, 255, 255, 0.12);
+}
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills .progress {
+  height: 60px;
+  display: block;
+  background: none;
+  border-radius: 0;
+}
+
+.skills .progress .skill {
+  padding: 10px 0;
+  margin: 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.skills .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+  background: rgba(255, 255, 255, 0.0.5);
+}
+
+.skills .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: width 0.9s;
+  background-color: #18d26e;
 }
 
 /*--------------------------------------------------------------
@@ -690,37 +727,232 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Skills
+# Portfolio
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
 }
 
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 0;
-  text-transform: uppercase;
-  display: block;
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 15px auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px 10px 16px;
+  font-size: 14px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
   color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 3px 10px 3px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  background: #18d26e;
 }
 
-.skills .progress-bar-wrap {
-  background: rgba(255, 255, 255, 0.0.5);
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: width 0.9s;
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #63eda3;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+  top: 15px;
+  left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.portfolio-details .container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.portfolio-details .portfolio-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info {
+  padding-top: 45px;
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-info p {
+  font-size: 15px;
+  padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+  .portfolio-details .portfolio-info {
+    padding-top: 20px;
+  }
+}
+
+.portfolio-details .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #18d26e;
 }
+
